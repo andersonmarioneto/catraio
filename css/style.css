@@ -1,0 +1,1101 @@
+/* Style by: Anderson Mário Neto | UI Designer */
+
+@import url("https://use.typekit.net/exu3bek.css");
+
+:root {
+    --primary-color: #049DBC;
+    --secondary-color: #00123D;
+    --fint-family-aileron: "Aileron", sans-serif;
+    --text-color: #131313;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--fint-family-aileron);
+    font-style: normal; 
+    background-color: var(--background-color);
+    width: 100%;
+    height: 100vh;
+}
+
+.fundo {
+    margin-top: -40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-image: url("../img/fundo.jpg");
+    background-repeat: no-repeat;
+    background-position: center 0%;
+    background-size: cover; /*posição fixa*/
+}
+
+a {
+    text-decoration: none;
+}
+
+/**************************************************************/
+/*SCROLL REVEAL************************************************/
+/**************************************************************/
+
+.scroll-1,
+.scroll-2,
+.scroll-3,
+.scroll-4,
+.scroll-5,
+.scroll-6 {
+    visibility: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/**************************************************************/
+/*SECTION CABECALHO********************************************/
+/**************************************************************/
+.cabecalho {
+    position: fixed; 
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+
+    /* Fixando o menu ao usar o scroll */
+    padding: 40px;
+    transition: 0.5s;
+}
+
+.cabecalho .area1 {
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho .area1 .menu ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.cabecalho .area1 .menu ul li {
+    margin: 20px;
+}
+
+.cabecalho .area1 .menu ul li a {
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+    padding: 0px 10px 7px 0px;
+    position: relative;
+}
+
+.cabecalho .area1 .menu ul li a.active::after {
+    content: " ";
+    width: 50%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.cabecalho .area1 .menu ul li a::after {
+    content: " ";
+    width: 0%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.cabecalho .area1 .menu ul li a:hover::after {
+    width: 100%;
+}
+
+.cabecalho .area1 .hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+
+
+@media (min-width: 750px) {
+    .cabecalho .area1 .menu ul li .button {
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        padding: 10px 20px;
+        background-color: var(--primary-color);
+        border-style: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.5s;
+        border: 1px solid var(--primary-color);
+    }
+
+    .cabecalho .area1 .menu ul li .button:hover {
+        color: #fff;
+        background-color: transparent;
+        transition: 0.5s;
+        border: none;
+    }
+}
+
+/* Fixando o menu ao usar o scroll */
+header.rolagem{
+    background-color: var(--text-color);
+    padding: 10px 40px;
+    transition: 0.5s;
+}
+
+/**************************************************************/
+/*SECTION PRINCIPAL********************************************/
+/**************************************************************/
+
+.principal .area2 {
+    margin: 40px;
+}
+
+.principal .area2 .titulo {
+    color: #EFEFEF;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-top: 200px;
+}
+
+.principal .area2 .titulo .color {
+    color: var(--primary-color);
+}
+
+.principal .area2 .paragrafo {
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px; /* 150% */
+    letter-spacing: 1px;
+    margin-top: 40px;
+}
+
+.principal .area2 .paragrafo .bold {
+    font-weight: 700;
+}
+
+.principal .area2 .hr {
+    background-color: #EFEFEF;
+    width: 220px;
+    height: 3px;
+    border-radius: 100px;
+    margin-top: 30px;
+}
+
+.principal .area2 .button {
+    display: flex;
+    width: 150px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: var(--primary-color);
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    border-style: none;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 3px solid var(--primary-color);
+}
+
+.principal .area2 .button:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+    transition: 0.5s;
+    border: 3px solid var(--primary-color);
+}
+
+/**************************************************************/
+/*SECTION SOBRE************************************************/
+/**************************************************************/
+
+.sobre .area3 {
+    margin: 40px;
+    padding-top: 40px;  
+}
+
+.sobre .area3 .area__sobre {
+    display: flex; 
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.sobre .area3 .area__sobre .esquerda {
+   padding: 40px 0px;
+   width: 380px;
+}
+
+.sobre .area3 .area__sobre .direita {
+    width: 800px;
+    padding: 40px 0px 40px 0px;
+}
+
+.sobre .area3 .area__sobre .hr {
+    background-color: var(--secondary-color);
+    width: 80px;
+    height: 3px;
+    border-radius: 100px;
+}
+
+.sobre .area3 .direita h2 {
+    color: var(--secondary-color);
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 65px;
+}
+
+.sobre .area3 .direita .paragrafo1 {
+    color: var(--primary-color);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px; 
+    letter-spacing: 1px;
+    margin-top: 25px;
+}
+
+.sobre .area3 .direita .paragrafo2 {
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin-top: 25px;
+}
+
+.sobre .area3 .direita .paragrafo2 .bold {
+    font-weight: 700;
+}
+
+.sobre .area3 .direita .paragrafo3 {
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.sobre .area3 .direita .paragrafo3 .bold {
+    font-weight: 700;
+}
+
+/**************************************************************/
+/*SECTION SERVICOS*********************************************/
+/**************************************************************/
+
+.servicos {
+    background-color: var(--text-color);
+}
+
+.servicos .area4 {
+    /*margin: 40px;*/
+    padding-bottom: 80px;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.servicos .area4 h2 {
+    margin-left: 50px;
+    color: var(--primary-color);
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 65px; 
+    padding-left: 10px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.servicos .area4 .area__servicos {
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+}
+
+.servicos .area4 .area__servicos .area__servicos1 {
+    display: block;
+}
+
+.servicos .area4 .area__servicos .area__servicos1 .servico1 {
+    border-radius: 10px;
+    border: 1px solid #0E0E0E;
+    background: #262626;
+    width: 580px;
+    display: flex;
+    transition: 0.5s;
+    margin: 10px;
+}
+
+.servicos .area4 .area__servicos .area__servicos1 .servico1:hover {
+    border-radius: 10px;
+    border: 1px solid #049DBC;
+    transition: 0.5s;
+    
+}
+
+.servicos .area4 .area__servicos .area__servicos1 .servico1 .esquerda img {
+    padding: 30px;
+}
+
+.servicos .area4 .area__servicos .area__servicos1 .servico1 .direita h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px; 
+    letter-spacing: 1.25px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.servicos .area4 .area__servicos .area__servicos1 .servico1 .direita p {
+    color: #EFEFEF;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0.9px;
+    padding: 0px 20px 0px 10px;
+    margin-bottom: 30px;
+}
+
+.servicos .area4 .area__servicos .area__servicos1 .servico1 .direita .bold {
+    font-weight: 700;
+}
+
+.servicos .area4 .area__servicos .area__servicos1 .servico2 {
+    border-radius: 10px;
+    border: 1px solid #0E0E0E;
+    background: #262626;
+    width: 580px;
+    display: flex;
+    transition: 0.5s;
+    margin: 10px;
+}
+
+.servicos .area4 .area__servicos .area__servicos1 .servico2:hover {
+    border-radius: 10px;
+    border: 1px solid #049DBC;
+    transition: 0.5s;
+}
+
+.servicos .area4 .area__servicos .area__servicos1 .servico2 .esquerda img {
+    padding: 30px;
+}
+
+.servicos .area4 .area__servicos .area__servicos1 .servico2 .direita h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px; 
+    letter-spacing: 1.25px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.servicos .area4 .area__servicos .area__servicos1 .servico2 .direita p {
+    color: #EFEFEF;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0.9px;
+    padding: 0px 20px 0px 10px;
+    margin-bottom: 30px;
+}
+
+.servicos .area4 .area__servicos .area__servicos1 .servico2 .direita .bold {
+    font-weight: 700;
+}
+
+.servicos .area4 .area__servicos .area__servicos2 {
+    display: block;
+}
+
+.servicos .area4 .area__servicos .area__servicos2 .servico3 {
+    border-radius: 10px;
+    border: 1px solid #0E0E0E;
+    background: #262626;
+    width: 580px;
+    display: flex;
+    transition: 0.5s;
+    margin: 10px;
+}
+
+.servicos .area4 .area__servicos .area__servicos2 .servico3:hover {
+    border-radius: 10px;
+    border: 1px solid #049DBC;
+    transition: 0.5s;
+}
+
+.servicos .area4 .area__servicos .area__servicos2 .servico3 .esquerda img {
+    padding: 30px;
+}
+
+.servicos .area4 .area__servicos .area__servicos2 .servico3 .direita h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px; 
+    letter-spacing: 1.25px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.servicos .area4 .area__servicos .area__servicos2 .servico3 .direita p {
+    color: #EFEFEF;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0.9px;
+    padding: 0px 20px 0px 10px;
+    margin-bottom: 30px;
+}
+
+.servicos .area4 .area__servicos .area__servicos2 .servico3 .direita .bold {
+    font-weight: 700;
+}
+
+.servicos .area4 .area__servicos .area__servicos2 .servico4 {
+    border-radius: 10px;
+    border: 1px solid #0E0E0E;
+    background: #262626;
+    width: 580px;
+    display: flex;
+    transition: 0.5s;
+    margin: 10px;
+}
+
+.servicos .area4 .area__servicos .area__servicos2 .servico4:hover {
+    border-radius: 10px;
+    border: 1px solid #049DBC;
+    transition: 0.5s;
+}
+
+.servicos .area4 .area__servicos .area__servicos2 .servico4 .esquerda img {
+    padding: 30px;
+}
+
+.servicos .area4 .area__servicos .area__servicos2 .servico4 .direita h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px; 
+    letter-spacing: 1.25px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.servicos .area4 .area__servicos .area__servicos2 .servico4 .direita p {
+    color: #EFEFEF;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0.9px;
+    padding: 0px 20px 0px 10px;
+    margin-bottom: 30px;
+}
+
+.servicos .area4 .area__servicos .area__servicos2 .servico4 .direita .bold {
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .servicos .area4 .area__servicos .area__servicos1 .servico1 {
+        border-radius: 10px;
+        border: 1px solid #0E0E0E;
+        background: #262626;
+        width: 80%;
+        display: block;
+        transition: 0.5s;
+        margin: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .servicos .area4 .area__servicos .area__servicos1 .servico2 {
+        border-radius: 10px;
+        border: 1px solid #0E0E0E;
+        background: #262626;
+        width: 80%;
+        display: block;
+        transition: 0.5s;
+        margin: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .servicos .area4 .area__servicos .area__servicos2 .servico3 {
+        border-radius: 10px;
+        border: 1px solid #0E0E0E;
+        background: #262626;
+        width: 80%;
+        display: block;
+        transition: 0.5s;
+        margin: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .servicos .area4 .area__servicos .area__servicos2 .servico4 {
+        border-radius: 10px;
+        border: 1px solid #0E0E0E;
+        background: #262626;
+        width: 80%;
+        display: block;
+        transition: 0.5s;
+        margin: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/**************************************************************/
+/*SECTION DEPOIMENTO*******************************************/
+/**************************************************************/
+
+.depoimento .area5 {
+    margin: 40px;
+    padding-bottom: 80px;
+    height: 70%;
+    
+}
+
+.depoimento .area5 .hr {
+    background-color: var(--secondary-color);
+    width: 80px;
+    height: 3px;
+    border-radius: 100px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.depoimento .area5 h2 {
+    color: var(--secondary-color);
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 65px; 
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.depoimento .area5 .area__depoimento {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.depoimento .area5 .area__depoimento .depoimento1 {
+    width: 380px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    box-shadow: 0px 2.30493px 4.60987px 0px transparent;
+}
+
+.depoimento .area5 .area__depoimento .depoimento1:hover {
+    border-radius: 10px;
+    transition: 0.5s;
+    box-shadow: 0px 2.30493px 4.60987px 0px #049dbc7a;
+}
+
+.depoimento .area5 .area__depoimento .depoimento1 .paragrafo {
+    background-color: #efefef;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 80px;
+    padding-top: 50px;
+}
+
+.depoimento .area5 .area__depoimento .depoimento1 .paragrafo p {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.depoimento .area5 .area__depoimento .depoimento1 .paragrafo .bold {
+    font-weight: 700;
+}
+
+.depoimento .area5 .area__depoimento .depoimento1 .foto {
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 130px;
+    width: 130px;
+}
+
+.depoimento .area5 .area__depoimento .depoimento1 .foto img {
+    height: 130px;
+    width: 130px;
+    position: relative;
+}
+
+.depoimento .area5 .area__depoimento .depoimento1 .nome h3 {
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 1.25px;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+.depoimento .area5 .area__depoimento .depoimento2 {
+    width: 380px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    box-shadow: 0px 2.30493px 4.60987px 0px transparent;
+}
+
+.depoimento .area5 .area__depoimento .depoimento2:hover {
+    border-radius: 10px;
+    transition: 0.5s;
+    box-shadow: 0px 2.30493px 4.60987px 0px #049dbc7a;
+}
+
+.depoimento .area5 .area__depoimento .depoimento2 .paragrafo {
+    background-color: #efefef;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 80px;
+    padding-top: 50px;
+}
+
+.depoimento .area5 .area__depoimento .depoimento2 .paragrafo p {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.depoimento .area5 .area__depoimento .depoimento2 .paragrafo .bold {
+    font-weight: 700;
+}
+
+.depoimento .area5 .area__depoimento .depoimento2 .foto {
+   margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 130px;
+    width: 130px;
+}
+
+.depoimento .area5 .area__depoimento .depoimento2 .foto img {
+    height: 130px;
+    width: 130px;
+    position: relative;
+}
+
+.depoimento .area5 .area__depoimento .depoimento2 .nome h3 {
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 1.25px;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+.depoimento .area5 .area__depoimento .depoimento3 {
+    width: 380px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    box-shadow: 0px 2.30493px 4.60987px 0px transparent;
+}
+
+.depoimento .area5 .area__depoimento .depoimento3:hover {
+    border-radius: 10px;
+    transition: 0.5s;
+    box-shadow: 0px 2.30493px 4.60987px 0px #049dbc7a;
+}
+
+.depoimento .area5 .area__depoimento .depoimento3 .paragrafo {
+    background-color: #efefef;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 80px;
+    padding-top: 50px;
+}
+
+.depoimento .area5 .area__depoimento .depoimento3 .paragrafo p {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.depoimento .area5 .area__depoimento .depoimento3 .paragrafo .bold {
+    font-weight: 700;
+}
+
+.depoimento .area5 .area__depoimento .depoimento3 .foto {
+   margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 130px;
+    width: 130px;
+}
+
+.depoimento .area5 .area__depoimento .depoimento3 .foto img {
+    height: 130px;
+    width: 130px;
+    position: relative;
+}
+
+.depoimento .area5 .area__depoimento .depoimento3 .nome h3 {
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 1.25px;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+/**************************************************************/
+/*SECTION SLIDES***********************************************/
+/**************************************************************/
+
+.slides .area6 {
+    background-color: var(--text-color);
+    width: 100%;
+    height: 208px;
+}
+
+.slides .hr {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 6px;
+}
+
+/**************************************************************/
+/*SECTION CONTATO**********************************************/
+/**************************************************************/
+
+.contato .bg {
+    margin-top: -40px;
+    background-color: #262626;
+}
+
+.contato .area7 {
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    /* gap: 40px; */
+}
+
+.contato h2 {
+    margin-left: 50px;
+    color: var(--primary-color);
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 65px; 
+    padding-left: 10px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.contato .area7 .formulario {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-right: 50px;
+}
+
+.contato .area7 .formulario input {
+    margin: 0px 20px 20px 0px;
+    width: 256px;
+    height: 49.556px;
+    border-radius: 11.525px;
+    background: #535353;
+    box-shadow: 0px 2.30493px 4.60987px 0px rgba(0, 0, 0, 0.25);
+    border-style: none;
+    padding: 20px;
+    color: #fff;
+}
+
+.contato .area7 .formulario textarea {
+    width: 535px;
+    height: 149px;
+    border-radius: 11.525px;
+    background: #535353;
+    box-shadow: 0px 2.30493px 4.60987px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    resize: none;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+.placeholder {
+    color: #fff;
+}
+
+.contato .area7 .formulario button {
+    display: flex;
+    width: 150px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: var(--primary-color);
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    border-style: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 3px solid var(--primary-color);
+}
+
+.contato .area7 .formulario button:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+    transition: 0.5s;
+    border: 3px solid var(--primary-color);
+}
+
+.contato .bg .area7 .info {
+    margin: 40px;
+}
+
+.contato .bg .area7 .info .localizacao {
+    display: flex;    
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.contato .bg .area7 .info .localizacao .esquerda {
+    margin-right: 30px;
+}
+
+.contato .bg .area7 .info .localizacao .direita h4 {
+    color: #EFEFEF;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.contato .bg .area7 .info .localizacao .direita p {
+    color: #EFEFEF;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0.9px;
+}
+
+.contato .bg .area7 .info .email {
+    display: flex;    
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.contato .bg .area7 .info .email .esquerda {
+    margin-right: 30px;
+}
+
+.contato .bg .area7 .info .email .direita h4 {
+    color: #EFEFEF;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.contato .bg .area7 .info .email .direita p {
+    color: #EFEFEF;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0.9px;
+}
+
+.contato .bg .area7 .info .telefone {
+    display: flex;    
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.contato .bg .area7 .info .telefone .esquerda {
+    margin-right: 30px;
+}
+
+.contato .bg .area7 .info .telefone .direita h4 {
+    color: #EFEFEF;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.contato .bg .area7 .info .telefone .direita p {
+    color: #EFEFEF;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0.9px;
+}
+
+@media (max-width: 600px) {
+    .contato .area7 .formulario textarea {
+        width: 256px;
+        height: 149px;
+        border-radius: 11.525px;
+        background: #535353;
+        box-shadow: 0px 2.30493px 4.60987px 0px rgba(0, 0, 0, 0.25);
+        padding: 20px;
+        resize: none;
+    }
+}
+
+.contato .bg .area7 .map {
+    background-color: #535353;
+    width: 80%;
+    height: 298px;
+    margin: 40px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.contato .bg .area7 .map iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/**************************************************************/
+/*SECTION RODAPE***********************************************/
+/**************************************************************/
+
+.rodape {
+    background-color: var(--text-color);
+    width: 100%;
+    padding: 40px;
+    margin-top: -40px;
+}
+.rodape .area8 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.rodape .area8 h4 {
+    color: #EFEFEF;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 30px;
+    letter-spacing: 1px;
+    margin: 40px 0px;
+}
+
+.rodape .area8 a {
+    color: #EFEFEF;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0.9px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.rodape .area8 a:hover {
+    color: var(--primary-color);
+    transform: 0.5s;
+}
+
+.rodape .area8 .rodape1 {
+    width: 300px;
+}
+
+.rodape .area8 .rodape1 img {
+    height: 150px;
+}
+
+.rodape .area8 .rodape1 p {
+    color: #efefef;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: 0.32px;
+    padding: 15px;
+}
+
+.rodape .area8 .rodape2 {
+    width: 250px;
+    padding: 10px;
+}
+
+.rodape .area8 .rodape3 {
+    width: 250px;
+    padding: 10px;
+}
+
+.rodape .area8 .rodape4 {
+    width: 250px;
+    padding: 10px;
+}
+
+.rodape .area9 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.rodape .area9 p {
+    color: #efefef;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: 0.32px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.rodape .area9 p span {
+    color: var(--primary-color);
+}
