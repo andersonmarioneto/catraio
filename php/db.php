@@ -1,24 +1,17 @@
 <?php
-$url = "postgresql://neondb_owner:npg_UeD7wNhzo3jX@ep-lucky-base-ah29697m-pooler.c-3.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require";
+// db.php — conecta ao Neon via proxy localhost (fallback para URL completa em produção)
+$host = getenv('DB_HOST') ?: '127.0.0.1';
+$port = getenv('DB_PORT') ?: 5432;
+$db   = getenv('DB_NAME') ?: 'neondb';
+$user = getenv('DB_USER') ?: 'neondb_owner';
+$pass = getenv('DB_PASS') ?: 'npg_UeD7wNhzo3jX';
 
-$parts = parse_url($url);
-
-$user = $parts["user"];
-$pass = $parts["pass"];
-$host = $parts["host"];
-$port = $parts["port"] ?? 5432;
-$db   = ltrim($parts["path"], "/");
-
-// Adicionando o endpoint nas opções
-$endpoint = "ep-lucky-base-ah29697m";
-
-$dsn = "pgsql:host=$host;port=$port;dbname=$db;sslmode=require;options=--endpoint=$endpoint";
+$dsn = "pgsql:host=$host;port=$port;dbname=$db;";
 
 try {
     $pdo = new PDO($dsn, $user, $pass, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
-    echo "Conectado com sucesso!";
 } catch (PDOException $e) {
     die("Erro de conexão: " . $e->getMessage());
 }
